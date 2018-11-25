@@ -8,7 +8,7 @@
       function initialize() {
         document.getElementById("knowledge").innerHTML = "Current Knowledge: " + knowledge;
         if ( window.knowledge > 29 ) {
-          document.body.write('<input type="button" value="ascend to moderate liberalism" onClick="gnomed();"/>');
+          document.getElementById("upgrade").innerHTML = '<input type="button" value="ascend to moderate liberalism" onClick="gnomed();"/>';
         }
       }
       
@@ -18,7 +18,7 @@
       }
       
       function gnomed() {
-        document.body.write('<iframe width="560" height="315" src="https://www.youtube.com/embed/9iacZrrkGzk?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>') 
+        document.getElementById("upgrade").innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/9iacZrrkGzk?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'; 
       }
     </script>
   </head>
@@ -28,6 +28,9 @@
     
     <h2> Welcome, neoliberal... </h2>
     <div id="knowledge">
+    </div>
+    
+    <div id="upgrade">
     </div>
     <input type="button" value="gain knawledge" onClick="increase_knowledge();"/>
     
