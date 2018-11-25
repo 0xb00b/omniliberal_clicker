@@ -4,10 +4,11 @@
     
     <script>
       var knowledge = 0;
+      var gnomed = 0;
       
       function initialize() {
         document.getElementById("knowledge").innerHTML = "Current Knowledge: " + knowledge;
-        if ( window.knowledge > 29 ) {
+        if ( window.knowledge > 29 && window.gnomed = 0) {
           document.getElementById("upgrade").innerHTML = '<h2>AVAILABLE UPGRADES</h2><input type="button" width="100" height="50" value="moderate liberalism" onClick="gnomed();"/>';
         }
       }
@@ -18,7 +19,10 @@
       }
       
       function gnomed() {
-        document.getElementById("upgrade").innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/9iacZrrkGzk?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'; 
+        if (window.gnomed == 0) {
+          document.getElementById("upgrade").innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/9iacZrrkGzk?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'; 
+          window.gnomed = 1;
+        }
       }
     </script>
   </head>
