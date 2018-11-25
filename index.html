@@ -4,8 +4,14 @@
     
     <script>
       var knowledge = 0;
-      document.getElementById("knowledge").innerHTML = "Current Knowledge: " + knowledge;
       
+      function initialize() {
+        document.getElementById("knowledge").innerHTML = "Current Knowledge: " + knowledge;
+      }
+      
+      function increase_knowledge() {
+       knowledge++; 
+      }
     </script>
   </head>
   <body onload="initialize();">
@@ -15,6 +21,6 @@
     <h2> Welcome, neoliberal... </h2>
     <div id="knowledge">
     </div>
-    <input type="button" value="gain knawledge" />
+    <input type="button" value="gain knawledge" onClick="increase_knowledge();"/>
   </body>
 </html>
