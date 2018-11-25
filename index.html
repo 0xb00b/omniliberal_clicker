@@ -7,11 +7,15 @@
       
       function initialize() {
         document.getElementById("knowledge").innerHTML = "Current Knowledge: " + knowledge;
+        if ( window.knowledge > 29 ) {
+          document.body.write('<input type="button" value="ascend to moderate liberalism" onClick="gnomed();"/>
+        }
       }
       
       function increase_knowledge() {
         alert('test');
         window.knowledge++; 
+        initialize();
       }
     </script>
   </head>
